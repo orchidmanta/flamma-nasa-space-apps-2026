@@ -2539,6 +2539,7 @@ a.cite:hover { text-decoration: underline; }
 .chip-img-empty { display: grid; place-items: center; font-size: 28px; }
 .chip-label { font-size: 13px; font-weight: 600; }
 .chip-pic[aria-pressed="true"] .chip-img { outline: 2px solid var(--accent); outline-offset: -2px; }
+.preset-note { margin: 10px auto 0; max-width: 640px; text-align: center; font-size: 12px; line-height: 1.5; color: var(--muted); }
 .chip-credits { margin: 6px 0 0; text-align: center; font-size: 9px; line-height: 1.4; color: var(--muted); opacity: 0.75; }
 .chip-credits a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 600px) { .chip-pic { width: calc(33.3% - 6px); } .chip-img { height: 56px; } }

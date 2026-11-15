@@ -672,7 +672,7 @@ askForm.addEventListener("submit", e => {
 });
 
 // example questions: fill the bar and ask
-// Home's "Ask Flamma about this" links: open the Ask tab and ask that question
+// Home's "Ask FLAMMA about this" links: open the Ask tab and ask that question
 document.querySelectorAll("[data-ask]").forEach(link => link.addEventListener("click", () => {
   askInput.value = link.dataset.ask;
   setTimeout(() => ask(link.dataset.ask), 0);   // after the page has switched to the Ask tab

@@ -320,7 +320,7 @@ function renderDetail(name) {
   if (!inv) { location.replace("#experiments"); return; }
   if (name !== detailName) window.scrollTo(0, 0);
   detailName = name;
-  document.title = `${inv.investigation} · Flamma`;
+  document.title = `${inv.investigation} · FLAMMA`;
 
   detailHead.innerHTML = `
     ${investigationIcon(inv, "lg")}

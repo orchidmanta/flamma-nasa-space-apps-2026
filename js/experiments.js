@@ -905,7 +905,7 @@ try { setFiltersOpen(localStorage.getItem("flamma-filters-open") !== "0"); } cat
 const tableBox = document.getElementById("dt-data");
 const tdState = { inv: null, show: new Set(["clean"]), part: 0 };
 const TD_VERSIONS = {
-  clean: { title: "Cleaned (Flamma)", suffix: "cleaned" },
+  clean: { title: "Cleaned (FLAMMA)", suffix: "cleaned" },
   raw: { title: "Original (NASA PSI)", suffix: "original NASA" },
 };
 // cleaned rows for each part of an investigation (same order as RAW_TABLES[inv])
@@ -935,7 +935,7 @@ function renderDataTable() {
     const { columns, rows, file } = tdTable(v);
     const note = v === "raw"
       ? `NASA's table exactly as published on PSI (${escapeHtml(file)}). Nothing changed.`
-      : "Flamma's cleaned version: shared column names, units converted, outcomes read from NASA's wording (kept in notes). Row counts can differ from the original where rows were split or dropped.";
+      : "FLAMMA's cleaned version: shared column names, units converted, outcomes read from NASA's wording (kept in notes). Row counts can differ from the original where rows were split or dropped.";
     return `<section class="td-pane" aria-label="${TD_VERSIONS[v].title}">
       <div class="td-pane-head">
         <h3>${TD_VERSIONS[v].title}</h3>

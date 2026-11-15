@@ -1,4 +1,4 @@
-// ================= "Where Flamma's NASA data has tests" =================
+// ================= "Where FLAMMA's NASA data has tests" =================
 // A simple scatter chart (plain SVG, no library): every burn test that reports both oxygen and
 // pressure is one dot, coloured by outcome; a star marks the conditions the user picked.
 // Shows at a glance where NASA's data is dense and where there are no tests (e.g. Moon-base air).

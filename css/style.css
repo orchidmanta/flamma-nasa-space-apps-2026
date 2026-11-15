@@ -2621,6 +2621,7 @@ a.cite:hover { text-decoration: underline; }
   align-items: center; padding: 96px 0; border-bottom: 1px solid var(--border); }
 .story-row.story-detector { --story: #a66cff; }
 .story-row.story-tanks { --story: #1fa89a; }
+.story-row.story-mist { --story: #3a8fd9; }
 .story-row:nth-of-type(even) .story-photo { order: 2; }          /* photo left, right, left as you scroll */
 .story-row .story-photo { margin: 0; }
 .story-row .story-photo img { width: 100%; height: clamp(320px, 52vh, 560px); border-radius: 22px; border: 0;

@@ -1,0 +1,155 @@
+investigation,psi_id,test_id,day,fuel,ambient_fuel_fraction_before,ambient_fuel_fraction_after,burner_o2_percent,pressure_bar,fuel_burn_rate_mg_s,o2_flow_mg_s,adiabatic_flame_temp_k,hot_ignition,burn_time_s,extinction_type,flame_color,comments,outcome
+CFI-G,PSI-159,21196 A1,1,ethane,0.2981,0.2981,21.0,1.1,1.5,5.59,2120.0,No,0.0,,,Failed to ignite,Didn't ignite
+CFI-G,PSI-159,21196 A2,1,ethane,0.2981,0.295425,21.0,1.1,1.5,5.59,2120.0,Yes,35.0,Flow terminated,yellow,,Kept burning
+CFI-G,PSI-159,21196 F1,1,ethane,0.295424848,0.291765297,15.0,1.103,1.5,5.58675424,1786.994366,Yes,36.0,Flow terminated,blue,Not spherical shape,Kept burning
+CFI-G,PSI-159,21196 H1,1,ethane,0.291765297,0.291765297,12.0,1.103,1.5,5.58675424,1567.030825,No,0.0,,,Not ignited,Didn't ignite
+CFI-G,PSI-159,21196 J1,1,ethane,0.291765297,0.291653541,13.5,1.103,1.5,5.58675424,1680.718299,Flash,1.0,Self-extinguished,,Not lasted long,Went out quickly
+CFI-G,PSI-159,21196 F2,1,ethane,0.291653541,0.288335586,15.0,1.103,0.75,2.79337712,1785.119116,Yes,66.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21196 F3,1,ethane,0.288335586,0.288310452,15.0,1.103,0.375,1.39668856,1783.432003,Flash,1.0,Self-extinguished,,A flash and gone,Went out quickly
+CFI-G,PSI-159,21196 F4,1,ethane,0.288310452,0.288272755,15.0,1.103,0.5625,2.09503284,1783.419087,Flash,1.0,Self-extinguished,,Not lasted long,Went out quickly
+CFI-G,PSI-159,21196 F5,1,ethane,0.288272755,0.28810939,15.0,1.103,2.439,9.084062394,1783.399711,Flash,1.0,Self-extinguished,,Not lasted long,Went out quickly
+CFI-G,PSI-159,21196 F6,1,ethane,0.28810939,0.284828889,15.0,1.103,0.75,2.79337712,1783.315686,Yes,66.0,Flow terminated,blue,Repeat of F2,Kept burning
+CFI-G,PSI-159,21196 K1,1,ethane,0.284828889,0.284718228,15.0,0.495,0.75,2.79337712,1781.609691,Flash,1.0,Self-extinguished,,Not lasted long,Went out quickly
+CFI-G,PSI-159,21196 L1,1,ethane,0.284718228,0.284635929,21.0,0.495,0.75,2.79337712,2111.04677,Flash,1.0,Self-extinguished,,Not lasted long,Went out quickly
+CFI-G,PSI-159,21196 L2,1,ethane,0.284635929,0.279534884,21.0,0.495,0.75,2.79337712,2110.98997,Yes,63.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21196 M1,1,ethane,0.279534884,0.279474794,30.0,0.495,0.75,2.79337712,2401.004197,Flash,1.0,Self-extinguished,,Not lasted long,Went out quickly
+CFI-G,PSI-159,21196 M2,1,ethane,0.279474794,0.275557001,30.0,0.495,0.75,2.79337712,2400.958103,Yes,66.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21196 M2_1,1,ethane,0.275557001,0.268135774,30.0,0.495,1.5,5.58675424,2397.909121,Yes,64.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21202 A1,2,ethane,0.06,0.06,85.0,2.207,0.25,0.931125707,2077.502017,No,0.0,,,No ignition,Didn't ignite
+CFI-G,PSI-159,21202 A2,2,ethane,0.06,0.059996273,85.0,2.207,0.5,1.862251413,2077.502017,Yes,2.0,Self-extinguished,blue,"Ignited, but lasted short.",Went out quickly
+CFI-G,PSI-159,21202 A3,2,ethane,0.059996273,0.059983229,85.0,2.207,1.0,3.724502827,2077.445204,Yes,3.5,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21202 A4,2,ethane,0.059983229,0.059937793,85.0,2.207,2.439,9.084062394,2077.246332,Yes,5.0,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21202 H1,2,ethane,0.12,0.119858746,85.0,2.207,1.0,3.724502827,2566.535755,Yes,28.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21202 H2,2,ethane,0.119858746,0.119662048,85.0,2.207,2.439,9.084062394,2565.96006,Yes,16.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21202 H3,2,ethane,0.119662048,0.119495835,85.0,2.207,0.5,1.862251413,2565.156105,Yes,66.0,Flow terminated,blue,Flow timed out,Kept burning
+CFI-G,PSI-159,21202 H4,2,ethane,0.119495835,0.119341058,85.0,2.207,0.75,2.79337712,2564.474659,Yes,41.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21202 J1,2,ethane,0.119341058,0.119141157,85.0,2.207,0.75,2.79337712,2563.838376,Yes,53.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21202 K1,2,ethane,0.119141157,0.118589306,85.0,1.103,1.0,3.724502827,2563.014104,Yes,55.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21202 K2,2,ethane,0.118589306,0.118076549,85.0,1.103,2.439,9.084062394,2560.723976,Yes,21.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21202 L1,2,ethane,0.118076549,0.117577094,85.0,1.103,1.0,3.724502827,2558.57659,Yes,50.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21209 A1,3,ethane,0.24,0.238982459,85.0,0.552,1.0,3.724502827,2820.983248,Yes,26.0,Flow terminated,limit,"Burner T limit, most images lost",Kept burning
+CFI-G,PSI-159,21209 A2,3,ethane,0.238982459,0.238982459,85.0,0.552,2.435,9.069164383,2819.838789,No,0.0,,,Aborted,Didn't ignite
+CFI-G,PSI-159,21209 A3,3,ethane,0.238982459,0.234050039,85.0,0.552,2.435,9.069164383,2819.838789,Yes,67.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21209 B1,3,ethane,0.234050039,0.224321623,85.0,0.552,2.435,9.069164383,2814.150439,Yes,136.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21209 A4,3,ethane,0.224321623,0.221438453,85.0,0.552,1.5,5.58675424,2802.206567,Yes,66.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21209 H1,3,ethane,0.221438453,0.217480394,50.0,0.552,1.5,5.58675424,2621.397849,Yes,66.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21209 J1,3,ethane,0.217480394,0.211850471,30.0,0.552,1.5,5.58675424,2339.776556,Yes,66.0,Flow terminated,yellow,,Kept burning
+CFI-G,PSI-159,21209 F1,3,ethane,0.211850471,0.204571036,21.0,0.552,1.5,5.58675424,2044.76624,Yes,66.0,Flow terminated,limit,Not round shape,Kept burning
+CFI-G,PSI-159,21209 F2,3,ethane,0.204571036,0.199816112,21.0,0.552,1.0,3.724502827,2035.764382,Yes,66.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21209 F3,3,ethane,0.199816112,0.197462908,21.0,0.552,0.5,1.862251413,2029.562068,Yes,66.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21209 B2,3,ethane,0.197462908,0.196171791,85.0,0.552,1.0,3.724502827,2763.395427,Yes,48.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21209 K1,3,ethane,0.196171791,0.195128289,18.0,0.552,0.5,1.862251413,1885.144054,Yes,26.0,Flow terminated,blue,Timed out,Kept burning
+CFI-G,PSI-159,21216 A1,4,ethane,0.1,0.099922963,85.0,3.31,1.0,3.724502827,2468.258593,Yes,17.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21216 A2,4,ethane,0.099922963,0.099853897,85.0,3.31,1.5,5.58675424,2467.80041,Yes,15.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21216 A3,4,ethane,0.099853897,0.099741839,85.0,3.31,2.435,9.069164383,2467.389001,Yes,15.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21216 A4,4,ethane,0.099741839,0.09968663,85.0,3.31,0.5,1.862251413,2466.720234,Yes,36.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21216 A5,4,ethane,0.09968663,0.099685864,85.0,3.31,0.25,0.931125707,2466.390164,Flash,1.0,Self-extinguished,,,Went out quickly
+CFI-G,PSI-159,21216 A6,4,ethane,0.099685864,0.099609979,85.0,3.31,0.375,1.39668856,2466.385577,Yes,66.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21216 B1,4,ethane,0.099609979,0.099495066,85.0,3.31,1.5,5.58675424,2465.931264,Yes,25.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21216 C1,4,ethane,0.099495066,0.099424557,50.0,3.31,1.5,5.58675424,2292.748844,Yes,12.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21216 F1,4,ethane,0.099424557,0.098736583,21.0,3.31,1.5,5.58675424,1786.726147,Yes,68.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21216 H1,4,ethane,0.098736583,0.098462155,85.0,1.103,1.5,5.58675424,2460.649609,Yes,20.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21216 H2,4,ethane,0.098462155,0.098061989,85.0,1.103,2.435,9.069164383,2458.969802,Yes,18.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21216 J1,4,ethane,0.098061989,0.097840812,50.0,1.103,1.0,3.724502827,2283.992627,Yes,19.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21216 K1,4,ethane,0.097840812,0.096528098,21.0,1.103,1.0,3.724502827,1779.772352,Yes,66.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21222 A1,5,propane,0.08,0.079950834,85.0,3.31,1.5,5.441972789,2532.591389,Yes,10.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21222 A2,5,propane,0.079950834,0.079906404,85.0,3.31,1.0,3.627981859,2532.275517,Yes,16.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21222 A3,5,propane,0.079906404,0.079781526,85.0,3.31,2.5,9.069954649,2531.989722,Yes,18.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21222 A4,5,propane,0.079781526,0.07976349,85.0,3.31,0.5,1.81399093,2531.184676,Yes,13.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21222 A5,5,propane,0.07976349,0.079760368,85.0,3.31,0.375,1.360493197,2531.068185,Yes,3.0,Self-extinguished,,,Went out quickly
+CFI-G,PSI-159,21222 B1,5,propane,0.079760368,0.079689638,85.0,3.31,1.5,5.441972789,2531.048018,Yes,17.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21222 C1,5,propane,0.079689638,0.079658522,50.0,3.31,1.5,5.441972789,2358.832703,Yes,6.0,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21222 C2,5,propane,0.079658522,0.079630869,50.0,3.31,1.0,3.627981859,2358.626362,Yes,8.0,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21222 F1,5,propane,0.079630869,0.079622244,21.0,3.31,1.5,5.441972789,1834.567261,Yes,1.0,Self-extinguished,,,Went out quickly
+CFI-G,PSI-159,21222 F2,5,propane,0.079622244,0.079622244,21.0,3.31,0.5,1.81399093,1834.524346,No,0.0,,,No ignition,Didn't ignite
+CFI-G,PSI-159,21228 A1,6,propane,0.0895,0.089438516,85.0,2.207,1.5,5.441972789,2586.94818,Yes,8.0,Self-extinguished,limit,,Went out quickly
+CFI-G,PSI-159,21228 A2,6,propane,0.089438516,0.089318272,85.0,2.207,2.5,9.069954649,2586.633881,Yes,11.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21228 A3,6,propane,0.089318272,0.089265815,85.0,2.207,1.0,3.627981859,2586.017969,Yes,12.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21228 A4,6,propane,0.089265815,0.089239591,85.0,2.207,0.5,1.81399093,2585.748763,Yes,12.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21228 B1,6,propane,0.089239591,0.089134747,85.0,2.207,1.5,5.441972789,2585.61406,Yes,16.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21228 C1,6,propane,0.089134747,0.089068575,50.0,2.207,1.5,5.441972789,2414.746738,Yes,8.0,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21228 C2,6,propane,0.089068575,0.088163914,50.0,2.207,2.5,9.069954649,2414.397018,Yes,66.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21228 C3,6,propane,0.088163914,0.088125544,50.0,2.207,1.0,3.627981859,2409.561834,Yes,7.0,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21228 C4,6,propane,0.088125544,0.088100881,50.0,2.207,0.5,1.81399093,2409.354503,Yes,9.0,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21228 F1,6,propane,0.088100881,0.087202272,21.0,2.207,1.5,5.441972789,1873.400434,Yes,65.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21228 H1,6,propane,0.087202272,0.087098504,85.0,1.103,1.5,5.441972789,2574.902538,Yes,8.0,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21228 H2,6,propane,0.087098504,0.087033671,85.0,1.103,0.5,1.81399093,2574.343536,Yes,15.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21228 J1,6,propane,0.087033671,0.086955901,85.0,1.103,0.5,1.81,2574.0,Yes,18.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21228 K1,6,propane,0.086955901,0.086809142,50.0,1.103,1.5,5.441972789,2402.944454,Yes,9.0,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21228 K2,6,propane,0.086809142,0.086743943,50.0,1.103,0.5,1.81399093,2402.127679,Yes,12.0,Self-extinguished,blue,,"Burned, then went out"
+CFI-G,PSI-159,21228 L1,6,propane,0.086743943,0.086688885,21.0,1.103,1.0,3.627981859,1867.59582,Yes,3.0,Self-extinguished,blue,,Went out quickly
+CFI-G,PSI-159,21228 L2,6,propane,0.086688885,0.086250062,21.0,1.103,1.5,5.441972789,1867.357153,Yes,16.0,Flow terminated,blue,,Kept burning
+CFI-G,PSI-159,21235 A1,7,propane,0.2059,0.204388716,85.0,1.103,1.5,5.441972789,2861.461152,Yes,66.0,Flow terminated,yellow then blue,,Kept burning
+CFI-G,PSI-159,21235 A2,7,propane,0.204388716,0.202126356,85.0,1.103,2.5,9.069954649,2859.843865,Yes,66.0,Flow terminated,yellow then blue,,Kept burning
+CFI-G,PSI-159,21235 C1,7,propane,0.202126356,0.200883448,50.0,1.103,1.0,3.627981859,2674.062129,Yes,66.0,Flow terminated,,,Kept burning
+CFI-G,PSI-159,21235 F1,7,propane,0.200883448,0.199695339,21.0,1.103,0.5,1.81399093,2102.864333,Yes,66.0,Flow terminated,,,Kept burning
+CFI-G,PSI-159,21235 F2,7,propane,0.199695339,0.199695339,21.0,1.103,2.5,9.069954649,2101.707843,No,0.0,,,,Didn't ignite
+CFI-G,PSI-159,21235 H1,7,propane,0.199695339,0.199633914,18.0,1.103,0.375,1.360493197,1954.1532,Yes,4.0,Self-extinguished,,,Went out quickly
+CFI-G,PSI-159,21235 J1,7,propane,0.199633914,0.198350097,19.0,1.103,0.5,1.81399093,2006.678395,Yes,66.0,Flow terminated,,,Kept burning
+CFI-G,PSI-159,21235 B1,7,propane,0.198350097,0.195292522,85.0,1.103,1.5,5.441972789,2853.118802,Yes,152.0,Flow terminated,,,Kept burning
+CFI-G,PSI-159,21235 K1,7,propane,0.195292522,0.192660203,85.0,0.552,1.5,5.441972789,2849.544458,Yes,66.0,Flow terminated,,,Kept burning
+CFI-G,PSI-159,21235 L1,7,propane,0.192660203,0.184447753,85.0,0.552,2.5,9.069954649,2846.370643,Yes,127.0,Flow terminated,,,Kept burning
+CFI-G,PSI-159,21242 A1,8,propane,0.4287,0.427799337,85.0,0.552,1.5,5.441972789,2978.371796,Yes,12.0,Flow terminated,Yellow,Terminated by burner temp hit the limit.,Kept burning
+CFI-G,PSI-159,21242 P1,8,propane,0.427799337,0.424514159,30.0,0.552,1.5,5.441972789,2506.980822,Yes,21.0,Flow terminated,Yellow,,Kept burning
+CFI-G,PSI-159,21242 F2,8,propane,0.424514159,0.424514159,21.0,0.552,1.5,5.441972789,2207.969786,No,0.0,,,"F1 was aborted, and F2 did not ignite.",Didn't ignite
+CFI-G,PSI-159,21242 F3,8,propane,0.424514159,0.424514159,21.0,0.552,1.5,5.441972789,2207.969786,No,0.0,,,,Didn't ignite
+CFI-G,PSI-159,21242 F4,8,propane,0.424514159,0.424514159,21.0,0.552,1.0,3.627981859,2207.969786,No,0.0,,,,Didn't ignite
+CFI-G,PSI-159,21242 P2,8,propane,0.424514159,0.424514159,30.0,0.552,1.5,5.441972789,2506.233979,No,0.0,,,Most data lost this day.,Didn't ignite
+CFI-G,PSI-159,21256 A1,9,butane,0.0881,0.088041351,85.0,2.207,1.5,5.368002409,2678.571274,Yes,9.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 A2,9,butane,0.088041351,0.087993574,85.0,2.207,1.0,3.578668273,2678.326663,Yes,11.0,Self-extinguished,Yellow-Blue,,"Burned, then went out"
+CFI-G,PSI-159,21256 A3,9,butane,0.087993574,0.087969688,85.0,2.207,0.5,1.789334136,2678.127192,Yes,11.0,Self-extinguished,Yellow-Blue,,"Burned, then went out"
+CFI-G,PSI-159,21256 A4,9,butane,0.087969688,0.087961546,85.0,2.207,0.375,1.342000602,2678.027398,Yes,5.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 A5,9,butane,0.087961546,0.087863884,85.0,2.207,2.5,8.946670681,2677.993369,Yes,9.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 C1,9,butane,0.087863884,0.087790043,50.0,2.207,1.5,5.368002409,2509.345147,Yes,9.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 F1,9,butane,0.087790043,0.0868801,21.0,2.207,1.5,5.368002409,1956.107065,Yes,66.0,Flow terminated,Yellow-Blue,,Kept burning
+CFI-G,PSI-159,21256 B1,9,butane,0.0868801,0.086795918,85.0,2.207,1.5,5.368002409,2673.425067,Yes,13.0,Self-extinguished,Yellow-Blue,,"Burned, then went out"
+CFI-G,PSI-159,21256 C2,9,butane,0.086795918,0.086771464,50.0,2.207,0.5,1.789334136,2504.933499,Yes,9.0,Self-extinguished,Yellow-Blue,No nitrogen flowed. This repeats A3.,Went out quickly
+CFI-G,PSI-159,21256 H1,9,butane,0.07,0.069958563,85.0,2.207,1.5,5.368002409,2585.922171,Yes,7.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 H2,9,butane,0.069958563,0.069930943,85.0,2.207,1.0,3.578668273,2585.658415,Yes,7.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 H3,9,butane,0.069930943,0.069921079,85.0,2.207,0.5,1.789334136,2585.482433,Yes,5.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 H4,9,butane,0.069921079,0.06991664,85.0,2.207,0.375,1.342000602,2585.419553,Yes,3.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 H5,9,butane,0.06991664,0.069847622,85.0,2.207,2.5,8.946670681,2585.391251,Yes,7.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 K1,9,butane,0.069847622,0.069818566,50.0,2.207,1.5,5.368002409,2415.926417,Yes,4.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21256 M1,9,butane,0.069818566,0.069806779,21.0,2.207,1.5,5.368002409,1879.235391,Yes,1.0,Self-extinguished,,Flash,Went out quickly
+CFI-G,PSI-159,21256 J1,9,butane,0.069806779,0.069765386,85.0,2.207,1.5,5.368002409,2584.689618,Yes,7.0,Self-extinguished,,,Went out quickly
+CFI-G,PSI-159,21265 A1,10,butane,0.058,0.057977904,85.0,3.31,1.5,5.368002409,2493.345063,Yes,6.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21265 A2,10,butane,0.057977904,0.057965629,85.0,3.31,1.0,3.578668273,2493.13738,Yes,5.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21265 A3,10,butane,0.057965629,0.057964402,85.0,3.31,0.5,1.789334136,2493.021936,Yes,1.0,Self-extinguished,Yellow-Blue,Flash,Went out quickly
+CFI-G,PSI-159,21265 A4,10,butane,0.057964402,0.057955197,85.0,3.31,0.75,2.684001204,2493.010389,Yes,5.0,Self-extinguished,Yellow-Blue,Flash,Went out quickly
+CFI-G,PSI-159,21265 A5,10,butane,0.057955197,0.057906116,85.0,3.31,2.5,8.946670681,2492.923773,Yes,8.0,Self-extinguished,Yellow-Blue,,Went out quickly
+CFI-G,PSI-159,21265 C1,10,butane,0.057906116,0.057892836,50.0,3.31,1.5,5.368002409,2320.742601,Yes,3.0,Self-extinguished,Blue,,Went out quickly
+CFI-G,PSI-159,21265 C2,10,butane,0.057892836,0.057855959,50.0,3.31,2.5,8.946670681,2320.614876,Yes,5.0,Self-extinguished,Blue,,Went out quickly
+CFI-G,PSI-159,21265 C3,10,butane,0.057855959,0.057850059,50.0,3.31,1.0,3.578668273,2320.259887,Yes,2.0,Self-extinguished,Blue,,Went out quickly
+CFI-G,PSI-159,21265 F1,10,butane,0.057850059,0.057846597,21.0,3.31,1.5,5.37,1807.0,Yes,0.5,Self-extinguished,Blue,,Went out quickly
+CFI-G,PSI-159,21265 F2,10,butane,0.057846597,0.057091447,21.0,3.31,2.5,8.95,1807.0,Yes,66.0,Flow terminated,Blue,Not spherical shape flame,Kept burning
+CFI-G,PSI-159,21265 F3,10,butane,0.057091447,0.057091447,21.0,3.31,1.0,3.58,1801.0,No,0.0,,,No ignition,Didn't ignite
+CFI-G,PSI-159,21265 F4,10,butane,0.057091447,0.057091447,21.0,3.31,1.0,3.58,1801.0,No,0.0,,,No ignition,Didn't ignite
+CFI-G,PSI-159,21265 H1,10,butane,0.057091447,0.057086602,40.0,3.31,1.5,5.37,2209.0,Yes,1.0,Self-extinguished,Blue,,Went out quickly
+CFI-G,PSI-159,21265 H2,10,butane,0.057086602,0.056556159,40.0,3.31,2.5,8.95,2209.0,Yes,66.0,Flow terminated,Blue,,Kept burning
+CFI-G,PSI-159,21265 J1,10,butane,0.056556159,0.056517425,70.0,3.31,2.5,8.946670681,2427.146039,Yes,6.0,Self-extinguished,Blue,,Went out quickly
+CFI-G,PSI-159,21265 K1,10,butane,0.056517425,0.056479312,45.0,3.31,2.5,8.946670681,2260.711549,Yes,5.0,Self-extinguished,Blue,,Went out quickly
+CFI-G,PSI-159,21265 H3,10,butane,0.056479312,0.055626433,40.0,3.31,2.5,8.946670681,2203.074582,Yes,107.0,Flow terminated,Blue,,Kept burning
+CFI-G,PSI-159,21270 A1,11,butane,0.1749,0.173778305,85.0,1.103,1.5,5.37,2872.801057,Yes,60.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21270 A2,11,butane,0.173778305,0.171001571,85.0,1.103,2.5,8.95,2871.533096,Yes,90.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21270 A3,11,butane,0.171001571,0.170677992,85.0,1.103,0.75,2.68,2868.31586,Yes,35.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21270 A4,11,butane,0.170677992,0.169429945,85.0,1.103,1.13,4.03,2867.933483,Yes,90.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21270 C1,11,butane,0.169429945,0.167695778,50.0,1.103,1.5,5.37,2681.669686,Yes,70.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21270 H1,11,butane,0.14,0.139163137,85.0,1.103,1.5,5.37,2822.860276,Yes,51.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21270 H2,11,butane,0.139163137,0.138810842,85.0,1.103,0.75,2.68,2821.334066,Yes,43.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21270 H3,11,butane,0.138810842,0.138281183,85.0,1.103,1.13,4.03,2820.685933,Yes,43.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21270 H4,11,butane,0.138281183,0.136039791,85.0,1.103,2.5,8.95,2819.705144,Yes,83.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21270 H5,11,butane,0.136039791,0.135390592,85.0,1.103,1.31,4.69,2815.468657,Yes,46.0,Self-extinguished,limit,,"Burned, then went out"
+CFI-G,PSI-159,21277 A1,12,butane,0.3617,0.360954674,85.0,0.552,1.5,5.368002409,2977.816828,Yes,12.0,Flow terminated,Yellow,hit the temperature limit,Kept burning
+CFI-G,PSI-159,21277 H1,12,butane,0.360954674,0.359429956,50.0,0.552,1.5,5.368002409,2788.034113,Yes,17.0,Flow terminated,Yellow,hit the temperature limit,Kept burning
+CFI-G,PSI-159,21277 J1,12,butane,0.359429956,0.359429956,21.0,0.552,1.5,5.368002409,2210.030184,No,0.0,,,No ignition,Didn't ignite
+CFI-G,PSI-159,21277 K1,12,butane,0.359429956,0.359429956,30.0,0.552,1.5,5.368002409,2507.215807,No,0.0,,,No ignition,Didn't ignite
+CFI-G,PSI-159,21277 K2,12,butane,0.359429956,0.356754522,30.0,0.552,1.5,5.368002409,2507.215807,Yes,20.0,Flow terminated,yellow,different N2 ig delta.,Kept burning
+CFI-G,PSI-159,21277 J2,12,butane,0.356754522,0.356754522,21.0,0.552,1.5,5.368002409,2209.372895,No,0.0,,,No ignition,Didn't ignite
+CFI-G,PSI-159,21277 C1,12,butane,0.2522,0.251247573,85.0,0.552,1.5,5.368002409,2932.454962,Yes,20.0,Flow terminated,yellow,,Kept burning
+CFI-G,PSI-159,21277 C2,12,butane,0.251247573,0.248412758,85.0,0.552,2.5,8.946670681,2931.928594,Yes,36.0,Flow terminated,yellow,,Kept burning
+CFI-G,PSI-159,21277 L1,12,butane,0.248412758,0.244087053,50.0,0.552,1.5,5.368002409,2744.233888,Yes,66.0,Flow terminated,yellow,hit the temperature limit,Kept burning
+CFI-G,PSI-159,21277 F1,12,butane,0.18,0.177499831,85.0,0.552,1.5,5.368002409,2878.349024,Yes,66.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21277 F2,12,butane,0.177499831,0.173392552,85.0,0.552,2.5,8.946670681,2875.672656,Yes,66.0,Flow terminated,limit,,Kept burning
+CFI-G,PSI-159,21277 M1,12,butane,0.1406,0.13702112,85.0,0.552,2.5,8.946670681,2823.94302,Yes,66.0,Flow terminated,limit,hit the temperature limit,Kept burning
+CFI-G,PSI-159,21277 N1,12,butane,0.1406,0.139267902,50.0,0.552,0.833333333,2.98222356,2642.951581,Yes,55.0,Flow terminated,Blue,hit the temperature limit,Kept burning
+CFI-G,PSI-159,21277 P1,12,butane,0.1406,0.139767809,30.0,0.552,0.51,1.825120819,2368.835465,Yes,40.0,Flow terminated,Blue,hit the temperature limit,Kept burning

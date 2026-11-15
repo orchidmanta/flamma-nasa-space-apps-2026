@@ -1,0 +1,19 @@
+investigation,psi_id,date,burner_mm,fuel,o2_levels,o2_min,o2_max,flames_ignited
+ACME BRE,PSI-20,2019-02-08,25.0,ethylene (100%),21; 26.5; 40,21.0,40.0,10
+ACME BRE,PSI-20,2019-02-20,25.0,ethylene (100%),26.5; 34,26.5,34.0,8
+ACME BRE,PSI-20,2019-02-25,25.0,ethylene (diluted to 50%),21; 26.5; 34; 40,21.0,40.0,8
+ACME BRE,PSI-20,2019-03-04,25.0,ethylene (diluted to 50%),26.5; 40,26.5,40.0,6
+ACME BRE,PSI-20,2019-03-07,25.0,ethylene (diluted to 50%),34,34.0,34.0,6
+ACME BRE,PSI-20,2019-03-11,25.0,ethylene (diluted to 50%),26.5; 34,26.5,34.0,7
+ACME BRE,PSI-20,2019-03-28,25.0,ethylene (100%),26.5; 34,26.5,34.0,8
+ACME BRE,PSI-20,2019-04-01,25.0,ethylene (100%),21,21.0,21.0,0
+ACME BRE,PSI-20,2019-04-04,25.0,ethylene (100%),21; 26.5; 34,21.0,34.0,9
+ACME BRE,PSI-20,2020-09-03,50.0,ethylene (100%),25; 34; 40,25.0,40.0,13
+ACME BRE,PSI-20,2020-10-17,25.0,ethylene (100%),26.5; 34,26.5,34.0,13
+ACME BRE,PSI-20,2020-12-05,25.0,methane (100%),25; 34; 40,25.0,40.0,21
+ACME BRE,PSI-20,2020-12-04,25.0,methane (100%),25; 40,25.0,40.0,18
+ACME BRE,PSI-20,2020-12-11,25.0,ethylene (diluted to 50%),25; 40,25.0,40.0,12
+ACME BRE,PSI-20,2020-12-17,25.0,ethylene (100%),34; 40,34.0,40.0,10
+ACME BRE,PSI-20,2020-12-23,25.0,ethylene (100%),25; 34; 40,25.0,40.0,17
+ACME BRE,PSI-20,2021-01-20,25.0,ethylene (100%),21; 26.5; 34,21.0,34.0,15
+ACME BRE,PSI-20,2021-01-28,50.0,ethylene (100%),25; 34; 40,25.0,40.0,13

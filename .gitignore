@@ -1,0 +1,27 @@
+# ---------- never upload ----------
+# secret API key (on Vercel it's set in Settings -> Environment Variables)
+.env
+.env.*
+.vercel
+.venv/
+.vscode/
+.DS_Store
+
+# ---------- kept on this computer only ----------
+# Source documents for Ask (some are owned by others, e.g. JAXA) and the text pieces built from them.
+# Rebuild with: .venv/bin/python scripts/build_chunks.py  (needs data/docs/)
+data/docs/
+api/chunks.json
+
+# backups
+backup-v0/
+backup-dataset-originals/
+
+# assets the website doesn't use (originals, screenshots)
+assets/0101247~small.jpg
+assets/S68-27365~orig.jpg
+assets/Screenshot*
+assets/SoFIE-GEL~orig.mp4
+assets/flamma-logo-original.png
+assets/internal-view-of-fm2.jpg
+assets/logome3.png

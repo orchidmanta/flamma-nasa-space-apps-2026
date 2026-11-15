@@ -1,0 +1,27 @@
+# Files that are NOT uploaded when you deploy to Vercel (the website doesn't need them online).
+
+# The secret Gemini API key. On Vercel, set GEMINI_API_KEY in the project's dashboard instead
+# (Settings -> Environment Variables).
+.env
+
+# Source documents for Ask: copyrighted papers (PDF) and their full texts.
+# Ask only needs api/chunks.json, which is built from them by scripts/build_chunks.py.
+data/docs/
+
+# Raw NASA files, backups and the Python tools: only used on your computer.
+Dataset/
+backup-dataset-originals/
+backup-v0/
+scripts/
+.venv/
+
+# assets the website doesn't use (originals, screenshots)
+assets/0101247~small.jpg
+assets/S68-27365~orig.jpg
+assets/Screenshot*
+assets/SoFIE-GEL~orig.mp4
+assets/flamma-logo-original.png
+assets/internal-view-of-fm2.jpg
+assets/logome3.png
+.vscode/
+.DS_Store

@@ -25,3 +25,7 @@ assets/internal-view-of-fm2.jpg
 assets/logome3.png
 .vscode/
 .DS_Store
+
+# submission documents (not part of the website)
+Project-Submission-flamma.*
+assets/Project-Submission-flamma.*

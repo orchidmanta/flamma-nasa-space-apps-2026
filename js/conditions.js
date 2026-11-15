@@ -278,7 +278,8 @@ document.querySelectorAll(".chip[data-preset]").forEach(chip => {
   // hover / keyboard-focus tooltip with the values this quick pick sets, built from PRESETS
   // (so it always matches), e.g. "34% O₂ · 0.7 bar · Gentle airflow · Moon"
   const p = PRESETS[chip.dataset.preset];
-  const tip = `${p.o2}% O₂ · ${SLIDERS.pressure.format(p.pressure)} bar · ${LABELS.airflow[p.airflow]} · ${LABELS.gravity[p.gravity]}`;
+  const G = { station: "≈ 0 g", moon: "0.17 g", mars: "0.38 g", earth: "1 g" };   // gravity compared with Earth's
+  const tip = `${p.o2}% O₂ · ${SLIDERS.pressure.format(p.pressure)} bar pressure · ${LABELS.airflow[p.airflow]} · ${LABELS.gravity[p.gravity]} (${G[p.gravity]})`;
   chip.dataset.tip = tip;
   chip.insertAdjacentHTML("beforeend", `<span class="visually-hidden">: ${tip}</span>`);   // for screen readers
 });

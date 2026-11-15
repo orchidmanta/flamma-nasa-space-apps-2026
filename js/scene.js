@@ -164,7 +164,7 @@ function updateScene(c) {
   // label tag: the picked preset's name (e.g. "Moon base"), otherwise the gravity
   const place = document.getElementById("scene-place");
   const preset = document.querySelector('.chip[data-preset][aria-pressed="true"] .chip-label');
-  const GRAVITY_NAMES = { station: "Space station · microgravity", moon: "Moon · 1/6 g", mars: "Mars · 1/3 g", earth: "Earth · 1 g" };
+  const GRAVITY_NAMES = { station: "Space station · ≈ 0 g", moon: "Moon · 0.17 g", mars: "Mars · 0.38 g", earth: "Earth · 1 g" };
   place.textContent = preset ? preset.textContent : (GRAVITY_NAMES[c.gravity] || "");
   place.hidden = !place.textContent;
 

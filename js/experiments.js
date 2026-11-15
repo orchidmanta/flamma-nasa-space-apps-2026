@@ -18,6 +18,14 @@ function showPage(id) {
   return id;
 }
 
+// the header stays at the top while scrolling: share its height with the CSS (--header-h),
+// so the Home video and the filter sidebar stick just below it (it's taller on phones)
+const siteHeader = document.querySelector(".site-header");
+const setHeaderHeight = () => document.documentElement.style.setProperty("--header-h", `${siteHeader.offsetHeight}px`);
+setHeaderHeight();
+if ("ResizeObserver" in window) new ResizeObserver(setHeaderHeight).observe(siteHeader);
+else window.addEventListener("resize", setHeaderHeight);
+
 // "Investigations": the tab opens the overview; the small ▾ (or hovering) shows the menu
 const caretBtn = document.querySelector(".tab-caret-btn"), dropMenu = document.getElementById("inv-menu");
 function setMenu(open) { dropMenu.hidden = !open; caretBtn.setAttribute("aria-expanded", String(open)); }

@@ -3013,3 +3013,19 @@ rect.rs-mark:hover { stroke: var(--text); stroke-width: 1.5; }
 body { top: 0 !important; }
 .goog-text-highlight, font[style*="background-color"] { background: none !important; box-shadow: none !important; }
 #google_translate_element { display: none; }
+
+/* ================= header stays at the top while scrolling ================= */
+/* --header-h = the header's real height (set by js/experiments.js; it's taller on phones) */
+:root { --header-h: 65px; }
+.site-header { position: sticky; top: 0; z-index: 70; }
+html { scroll-padding-top: calc(var(--header-h) + 8px); }   /* links and "scroll to" land below the header */
+.intro { top: var(--header-h); height: calc(100vh - var(--header-h)); }
+@media (min-width: 901px) {   /* the filter panel only sticks beside the list on wide screens */
+  .inv-side { top: calc(var(--header-h) + 16px); max-height: calc(100vh - var(--header-h) - 32px); }
+}
+
+/* "Built for anyone: Researchers · Professors · Students" (Home, FLAMMA section) */
+.why-for { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 10px; margin: 22px 0 0; }
+.why-for-label { font-size: 14px; font-weight: 600; color: var(--muted); }
+.why-chip { padding: 6px 14px; font-size: 14px; font-weight: 600; color: var(--text);
+  background: var(--card); border: 1px solid var(--border-2); border-radius: 999px; }

@@ -301,7 +301,7 @@ function testsTable(tests, columns) {
   const missing = columns.filter((c, i) => empty[i]).map(c => c.label);
   return `
     <div class="table-wrap ask-inv-tests">
-      <table>
+      <table class="notranslate" translate="no">
         <tr>${shown.map(i => `<th>${columns[i].label}</th>`).join("")}</tr>
         ${rows.join("")}
       </table>
@@ -489,7 +489,7 @@ function card(inv) {
       <header class="exp-card-head">
         ${investigationIcon(inv)}
         <div>
-          <h3>${escapeHtml(fullName(inv))}</h3>
+          <h3 class="notranslate" translate="no">${escapeHtml(fullName(inv))}</h3>
           <p class="exp-card-id">${escapeHtml(inv.psi_id)} <span aria-hidden="true">·</span> ${doiLink(inv)}</p>
         </div>
         <span class="pillar-tag tag-${inv.pillar.toLowerCase()}">${escapeHtml(inv.pillar)}</span>
@@ -943,7 +943,7 @@ function renderDataTable() {
         <button type="button" class="csv-btn" data-td-download="${v}">${downloadIcon}Download CSV</button>
       </div>
       <p class="td-note">${note}</p>
-      <div class="table-wrap td-wrap"><table class="td-table">
+      <div class="table-wrap td-wrap"><table class="td-table notranslate" translate="no">
         <thead><tr>${columns.map(c => `<th scope="col">${escapeHtml(c)}</th>`).join("")}</tr></thead>
         <tbody>${rows.map(r => `<tr>${r.map(x => `<td>${escapeHtml(x ?? "")}</td>`).join("")}</tr>`).join("")}</tbody>
       </table></div>

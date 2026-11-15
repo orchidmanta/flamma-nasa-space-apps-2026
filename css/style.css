@@ -2993,3 +2993,22 @@ rect.rs-mark:hover { stroke: var(--text); stroke-width: 1.5; }
   .detail-head .pillar-tag { order: -1; }
 }
 .compare-dl { margin: 0 0 12px; }
+
+/* ================= BM / EN button (Google Translate, js/translate.js) ================= */
+.lang-toggle { width: auto; padding: 0 10px; gap: 6px; grid-auto-flow: column; font: inherit; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; margin-right: 8px; }
+.lang-toggle .lang-sep { color: var(--border-2); font-weight: 400; }
+.lang-toggle .lang-en { color: var(--accent); }                 /* English on */
+.lang-toggle.is-ms .lang-en { color: inherit; }
+.lang-toggle.is-ms .lang-ms { color: var(--accent); }           /* Malay on */
+/* "Translated by Google Translate": shown only while Malay is on */
+.gt-credit { position: fixed; z-index: 60; right: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none;
+  background: var(--card); border: 1px solid var(--border-2); border-radius: 999px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); }
+.gt-credit:hover { color: var(--text); border-color: var(--accent); }
+.gt-credit[hidden] { display: none; }
+/* hide Google's own banner bar, hover pop-ups and highlight, so Flamma's header stays in place */
+.goog-te-banner-frame, iframe.skiptranslate, .VIpgJd-ZVi9od-ORHb-OEVmcd, #goog-gt-tt, .goog-te-balloon-frame,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-yAWNEb-L7lbkb { display: none !important; }
+body { top: 0 !important; }
+.goog-text-highlight, font[style*="background-color"] { background: none !important; box-shadow: none !important; }
+#google_translate_element { display: none; }

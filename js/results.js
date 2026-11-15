@@ -326,7 +326,7 @@ function renderDetail(name) {
     ${investigationIcon(inv, "lg")}
     <div class="dt-head-text">
       <p class="td-kicker">${escapeHtml(inv.psi_id)}</p>
-      <h1 id="td-title" class="dt-title" tabindex="-1">${escapeHtml(fullName(inv))}</h1>
+      <h1 id="td-title" class="dt-title notranslate" translate="no" tabindex="-1">${escapeHtml(fullName(inv))}</h1>
       <p class="dt-intro">${escapeHtml(investigationIntro(inv))}</p>
       <p class="dt-links">
         <span>${escapeHtml((inv.platform || "Platform not listed").replace("International Space Station (ISS)", "ISS"))}</span>

@@ -9,6 +9,8 @@ Built by **Team Nyala** for the **NASA Space Apps Challenge 2026**: *Flame in Fr
 
 ## What is Flamma?
 
+*Flamma* is the Latin word for "flame".
+
 On Earth, hot air rises and pulls fresh oxygen into a flame. In space there is no "up". Flames turn
 round and slow, and some keep burning in conditions where they would go out on Earth. That makes fire one of the
 most dangerous emergencies on a spacecraft.
@@ -94,6 +96,7 @@ To rebuild the cleaned data: `python -m venv .venv && .venv/bin/pip install pand
   histories) and JAXA's FLARE experiment pages (courtesy of JAXA)
 - **Images and video:** NASA (credited on the site next to each picture)
 - **AI:** Google Gemini
+- **Logo:** hand-drawn by orchidmanta
 
 ## Use of Super Intelligence (SI)
 
@@ -107,6 +110,7 @@ FLAMMA was built with SI assistance, as allowed by the NASA Space Apps Challenge
 - **Writing and translation:** website text, this README and the English translation of JAXA's Japanese FLARE page were
   written or translated with AI help, and checked against the sources.
 - **Images and videos:** all photos and videos are real NASA/JAXA media (credited on the site). None are SI-generated.
+  The FLAMMA logo is hand-drawn by orchidmanta.
 
 ## Disclaimer
 

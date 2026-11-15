@@ -170,9 +170,9 @@ function finishSliderAnimations() {
 }
 
 // ================= Animation on / off =================
-// Off (default): the scene is hidden, the conditions are shown on the page, and
+// Off: the scene is hidden, the conditions are shown on the page, and
 // "Will it burn?" goes straight to the results (quick access, e.g. for researchers).
-// On: the animated scene plays the test. fire.js reads skipAnimation.
+// On (default): the animated scene plays the test. fire.js reads skipAnimation.
 // The choice is remembered in this browser.
 const animToggle = document.getElementById("anim-toggle");
 let skipAnimation = true;
@@ -182,11 +182,11 @@ function setAnimation(on) {
   animToggle.checked = on;
   stage.classList.toggle("conditions-only", !on);
   stage.classList.toggle("panel-closed", on);     // no animation: the conditions are always shown
-  try { localStorage.setItem("flamma-animation", on ? "1" : "0"); } catch {}
+  try { localStorage.setItem("flamma-show-animation", on ? "1" : "0"); } catch {}
 }
 
 animToggle.addEventListener("change", () => setAnimation(animToggle.checked));
-try { setAnimation(localStorage.getItem("flamma-animation") === "1"); } catch { setAnimation(false); }
+try { setAnimation(localStorage.getItem("flamma-show-animation") !== "0"); } catch { setAnimation(true); }   // on unless switched off
 
 // "Will it burn?" closes the panel so the animation has the whole scene
 // (if nothing is set, the panel stays open: the results area asks for a condition)
@@ -259,6 +259,17 @@ function applyPreset(name) {
   setChoice("airflow", p.airflow);
   setChoice("gravity", p.gravity);
   setActiveChip(name);
+  showConditions();
+}
+
+// after a quick pick: open the conditions so the user sees what it set
+function showConditions() {
+  if (stage.classList.contains("panel-closed")) setPanelOpen(true);   // animation on: the panel was closed
+  else {                                                              // animation off: the panel is on the page
+    const panel = document.querySelector(".panel");
+    const r = panel.getBoundingClientRect();
+    if (r.top > window.innerHeight * 0.6) panel.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "start" });
+  }
 }
 
 document.querySelectorAll(".chip[data-preset]").forEach(chip => {

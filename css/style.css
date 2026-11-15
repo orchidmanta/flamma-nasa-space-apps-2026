@@ -2543,7 +2543,14 @@ a.cite:hover { text-decoration: underline; }
 .preset-note { margin: 10px auto 0; max-width: 640px; text-align: center; font-size: 12px; line-height: 1.5; color: var(--muted); }
 .chip-credits { margin: 6px 0 0; text-align: center; font-size: 9px; line-height: 1.4; color: var(--muted); opacity: 0.75; }
 .chip-credits a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
-@media (max-width: 600px) { .chip-pic { width: calc(33.3% - 6px); } .chip-img { height: 56px; } }
+/* every quick pick is the same size; a two-line name ("Pressurized rover") doesn't make its card taller */
+.chip-pic .chip-label { display: flex; align-items: center; justify-content: center; min-height: 2.5em; line-height: 1.25; }
+@media (max-width: 600px) {
+  .quick-picks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; }
+  .quick-picks .quick-label { grid-column: 1 / -1; text-align: center; margin: 0 0 2px; }
+  .chip-pic { width: auto; height: 100%; }
+  .chip-img { height: 56px; }
+}
 
 /* label tag in the scene: where you are */
 .scene-place { position: absolute; top: 14px; left: 14px; z-index: 3; padding: 4px 12px; border-radius: 999px;
@@ -2707,8 +2714,6 @@ a.cite:hover { text-decoration: underline; }
 .inv-side-head { display: flex; align-items: center; justify-content: space-between; font-family: var(--font-display); font-weight: 700; font-size: 16px; }
 .inv-side-close { width: 28px; height: 28px; border: 1px solid var(--border-2); border-radius: 50%; background: none;
   color: var(--muted); font-size: 18px; line-height: 1; cursor: pointer; display: inline-grid; place-items: center; }
-.tab-caret-btn svg { transition: transform 0.2s; }
-.tab-caret-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
 .inv-side-close:hover { color: var(--text); border-color: var(--accent); }
 .inv-side .inv-sort { display: grid; gap: 6px; }
 .inv-side .inv-sort span { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
@@ -2783,18 +2788,17 @@ a.cite:hover { text-decoration: underline; }
   .ov-split, .ov-stats, .ov-steps { grid-template-columns: 1fr; }
 }
 
-/* Investigations tab: the tab opens the overview; a small ▾ opens the menu */
+/* Investigations tab: one button with the arrow inside; it opens Overview / NASA / Other */
 .tab-menu { display: inline-flex; align-items: center; }
-.tab-caret-btn { margin-left: -6px; padding: 6px 10px; min-width: 34px; min-height: 34px; background: none; border: 0; border-radius: 8px;
-  color: var(--muted); font-size: 18px; line-height: 1; cursor: pointer; display: inline-grid; place-items: center; }
-.tab-caret-btn svg { transition: transform 0.2s; }
-.tab-caret-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
-.tab-caret-btn:hover, .tab-caret-btn[aria-expanded="true"] { background: rgba(242, 140, 56, 0.12); }
-.tab-caret-btn:hover, .tab-caret-btn[aria-expanded="true"] { color: var(--text); }
-.tab-dropdown { width: 220px; left: 0; right: auto; transform: none; }
+.tab-drop { display: inline-flex; align-items: center; gap: 6px; padding-right: 10px; }
+.tab-caret-icon { flex: none; transition: transform 0.2s; }
+.tab-drop[aria-expanded="true"] { color: var(--text); background: var(--card); }
+.tab-drop[aria-expanded="true"] .tab-caret-icon { transform: rotate(180deg); }
+.tab-dropdown { width: 230px; left: 0; right: auto; transform: none; }
 /* invisible bridge over the gap between the tab and the menu, so moving the mouse down doesn't close it */
 .tab-dropdown::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
 .tab-dropdown a { font-weight: 600; font-size: 14px; }
+.tab-dropdown a.active { color: #fff; box-shadow: inset 3px 0 0 var(--accent); background: rgba(242, 140, 56, 0.08); }
 
 /* overview 03: big pictures in a horizontal row */
 .ov-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
@@ -3025,7 +3029,45 @@ html { scroll-padding-top: calc(var(--header-h) + 8px); }   /* links and "scroll
 }
 
 /* "Built for anyone: Researchers · Professors · Students" (Home, FLAMMA section) */
-.why-for { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 10px; margin: 22px 0 0; }
-.why-for-label { font-size: 14px; font-weight: 600; color: var(--muted); }
-.why-chip { padding: 6px 14px; font-size: 14px; font-weight: 600; color: var(--text);
-  background: var(--card); border: 1px solid var(--border-2); border-radius: 999px; }
+.why-for { margin: 24px 0 0; max-width: 900px; font-family: var(--font-display); font-size: clamp(18px, 1.9vw, 23px);
+  font-weight: 700; line-height: 1.4; letter-spacing: 0.01em; color: var(--text); }
+.why-for b { color: var(--accent); font-weight: 800; }
+.why-for .nowrap { white-space: nowrap; }
+
+/* ================= logo credit on Home ================= */
+.why-meaning { margin: -4px 0 10px; font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--muted); }
+.why-meaning i { color: var(--accent); }
+.why-logo-note { margin: 0 0 14px; font-size: 12px; color: var(--muted); font-style: italic; }
+
+/* ================= phones and small tablets: ☰ menu ================= */
+.nav-toggle { display: none; }
+.nav-line { transition: transform 0.2s, opacity 0.2s; transform-origin: 12px 12px; }
+@media (max-width: 860px) {
+  .site-header { flex-wrap: nowrap; padding: 12px 16px; }
+  .header-right { width: auto; gap: 8px; }
+  .nav-toggle { display: inline-grid; }
+  .nav-toggle[aria-expanded="true"] .nav-line-1 { transform: translateY(5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .nav-line-2 { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] .nav-line-3 { transform: translateY(-5px) rotate(-45deg); }
+  /* the tabs become a list that drops down under the header */
+  .tabs { display: none; position: absolute; top: 100%; left: 0; right: 0; flex: none; flex-direction: column; gap: 2px;
+    padding: 10px 16px 18px; background: #07090c; border-bottom: 1px solid #1a1f27; box-shadow: 0 24px 40px rgba(0, 0, 0, 0.45);
+    max-height: calc(100vh - var(--header-h)); max-height: calc(100dvh - var(--header-h)); overflow-y: auto; }
+  .tabs.is-open { display: flex; }
+  .tab { width: 100%; padding: 13px 14px; font-size: 16px; text-align: left; flex: none; }
+  .tab.active { box-shadow: inset 3px 0 0 var(--accent); }
+  .tab-long { display: inline; }
+  /* "Investigations" becomes a small heading with its three pages always shown under it */
+  .tab-menu { display: block; }
+  .tab-drop { cursor: default; padding-top: 16px; padding-bottom: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--muted); background: none !important; box-shadow: none !important;
+    border-color: transparent !important; }
+  .lang-toggle { margin-right: 0; }
+  .tab-drop .tab-caret-icon { display: none; }
+  .tab-dropdown, .tab-dropdown[hidden] { position: static; display: grid; width: auto; padding: 0 0 6px 10px; background: none;
+    border: 0; border-radius: 0; box-shadow: none; }
+  .tab-dropdown::before { display: none; }
+  .tab-dropdown a { padding: 12px 14px; font-size: 15px; font-weight: 500; color: var(--muted); }
+  .tab-dropdown a.active { color: var(--text); }
+}
+@media (max-width: 380px) { .logo-text { font-size: 15px; } .lang-toggle { padding: 0 6px; } }

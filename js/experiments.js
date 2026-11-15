@@ -13,7 +13,14 @@ function showPage(id) {
   tabs.forEach(t => {
     const on = t.dataset.page === id || (t.dataset.group || "").split(" ").includes(id);   // dropdown tab: any of its pages
     t.classList.toggle("active", on);
-    if (on) t.setAttribute("aria-current", "page"); else t.removeAttribute("aria-current");
+    if (on && t.dataset.page) t.setAttribute("aria-current", "page"); else t.removeAttribute("aria-current");
+  });
+  // menu items under "Investigations" (an investigation's own page counts as "NASA investigations")
+  const sub = id === "experiment" ? "experiments" : id;
+  document.querySelectorAll(".tab-dropdown a").forEach(a => {
+    const on = a.getAttribute("href") === "#" + sub;
+    a.classList.toggle("active", on);
+    if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   });
   return id;
 }
@@ -26,19 +33,33 @@ setHeaderHeight();
 if ("ResizeObserver" in window) new ResizeObserver(setHeaderHeight).observe(siteHeader);
 else window.addEventListener("resize", setHeaderHeight);
 
-// "Investigations": the tab opens the overview; the small ▾ (or hovering) shows the menu
-const caretBtn = document.querySelector(".tab-caret-btn"), dropMenu = document.getElementById("inv-menu");
-function setMenu(open) { dropMenu.hidden = !open; caretBtn.setAttribute("aria-expanded", String(open)); }
-caretBtn.addEventListener("click", e => { e.stopPropagation(); setMenu(dropMenu.hidden); });
+// "Investigations": the button (or hovering, on a computer) opens a menu: Overview, NASA, Other
+const dropBtn = document.querySelector(".tab-drop"), dropMenu = document.getElementById("inv-menu");
 const tabMenu = document.querySelector(".tab-menu");
+const phoneMenu = window.matchMedia("(max-width: 860px)");          // same width as the ☰ rule in style.css
+const canHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+function setMenu(open) { dropMenu.hidden = !open; dropBtn.setAttribute("aria-expanded", String(open)); }
+dropBtn.addEventListener("click", e => { e.stopPropagation(); if (!phoneMenu.matches) setMenu(dropMenu.hidden); });
 let menuTimer;   // a short delay before closing, so a slightly wobbly mouse doesn't shut the menu
-tabMenu.addEventListener("mouseenter", () => { clearTimeout(menuTimer); setMenu(true); });
-tabMenu.addEventListener("mouseleave", () => { menuTimer = setTimeout(() => setMenu(false), 300); });
-dropMenu.addEventListener("click", () => setMenu(false));
+tabMenu.addEventListener("mouseenter", () => { if (canHover.matches && !phoneMenu.matches) { clearTimeout(menuTimer); setMenu(true); } });
+tabMenu.addEventListener("mouseleave", () => { if (!phoneMenu.matches) menuTimer = setTimeout(() => setMenu(false), 300); });
 document.addEventListener("click", e => { if (!e.target.closest(".tab-menu")) setMenu(false); });
-document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+
+// phones: the ☰ button shows the tabs as a list under the header
+const nav = document.getElementById("main-nav"), navBtn = document.getElementById("nav-toggle");
+function setNav(open) {
+  nav.classList.toggle("is-open", open);
+  navBtn.setAttribute("aria-expanded", String(open));
+  navBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+navBtn.addEventListener("click", e => { e.stopPropagation(); setNav(!nav.classList.contains("is-open")); });
+nav.addEventListener("click", e => { if (e.target.closest("a, .tab[data-page]")) { setNav(false); setMenu(false); } });
+document.addEventListener("click", e => { if (!e.target.closest("#main-nav, #nav-toggle")) setNav(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") { setMenu(false); setNav(false); } });
+phoneMenu.addEventListener("change", () => { setNav(false); setMenu(false); });
 
 tabs.forEach(t => t.addEventListener("click", () => {
+  if (!t.dataset.page) return;   // "Investigations" only opens its menu
   history.replaceState(null, "", t.dataset.page === HOME_PAGE ? location.pathname : "#" + t.dataset.page);
   route();
   window.scrollTo(0, 0);

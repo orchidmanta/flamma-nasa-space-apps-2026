@@ -3,7 +3,7 @@
 **Explore how fire behaves in space, using NASA's microgravity combustion data.**
 Built by **Team Nyala** for the **NASA Space Apps Challenge 2026**: *Flame in Freefall*.
 
-🌐 **Live site:** https://flamma-one.vercel.app
+🌐 **Live site:** https://flammainspace.vercel.app
 
 ---
 

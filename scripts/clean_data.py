@@ -22,6 +22,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "Dataset"          # raw files (read only)
 CLEAN = ROOT / "data" / "clean"
+JS_DATA = ROOT / "js" / "data"    # data files the website loads
 
 # ---------------------------------------------------------------- common schema
 COLUMNS = [
@@ -1001,45 +1002,45 @@ def main():
     inverse = clean_cfig_inverse()
     inverse.to_csv(CLEAN / "cfig_inverse.csv", index=False)
     write_js(inverse.astype(object).to_dict("records"), "INVERSE_TESTS",
-             ROOT / "inverse.js", "data/clean/cfig_inverse.csv")
+             JS_DATA / "inverse.js", "data/clean/cfig_inverse.csv")
     print(f"Wrote {len(inverse)} CFI-G inverse-flame tests -> {CLEAN / 'cfig_inverse.csv'} and inverse.js")
 
     bre = clean_bre()
     bre.to_csv(CLEAN / "bre_days.csv", index=False)
-    write_js(bre.astype(object).to_dict("records"), "BRE_DAYS", ROOT / "bre.js", "data/clean/bre_days.csv")
+    write_js(bre.astype(object).to_dict("records"), "BRE_DAYS", JS_DATA / "bre.js", "data/clean/bre_days.csv")
     print(f"Wrote {len(bre)} ACME BRE days ({bre['flames_ignited'].sum()} flames) -> {CLEAN / 'bre_days.csv'} and bre.js")
 
     # website data (data.js next to index.html)
-    write_data_js(tests, ROOT / "data.js")
-    print(f"Wrote {len(tests)} tests -> {ROOT / 'data.js'}")
+    write_data_js(tests, JS_DATA / "data.js")
+    print(f"Wrote {len(tests)} tests -> {JS_DATA / 'data.js'}")
 
     # SAME-R smoke detection -> its own table
     detection = clean_same_r()
     detection.to_csv(CLEAN / "detection.csv", index=False)
     write_js(detection.astype(object).to_dict("records"), "DETECTION_TESTS",
-             ROOT / "detection.js", "data/clean/detection.csv")
+             JS_DATA / "detection.js", "data/clean/detection.csv")
     print(f"Wrote {len(detection)} SAME-R measurements -> {CLEAN / 'detection.csv'} and detection.js")
 
     # BASS (first) and SPICE: tables without per-test conditions/outcomes -> own tables (cards only)
     bass = clean_bass1()
     bass.to_csv(CLEAN / "bass_tests.csv", index=False)
-    write_js(bass.astype(object).to_dict("records"), "BASS_TESTS", ROOT / "bass.js", "data/clean/bass_tests.csv")
+    write_js(bass.astype(object).to_dict("records"), "BASS_TESTS", JS_DATA / "bass.js", "data/clean/bass_tests.csv")
     print(f"Wrote {len(bass)} BASS tests -> {CLEAN / 'bass_tests.csv'} and bass.js")
 
     spice = clean_spice()
     spice.to_csv(CLEAN / "spice_runs.csv", index=False)
-    write_js(spice.astype(object).to_dict("records"), "SPICE_RUNS", ROOT / "spice.js", "data/clean/spice_runs.csv")
+    write_js(spice.astype(object).to_dict("records"), "SPICE_RUNS", JS_DATA / "spice.js", "data/clean/spice_runs.csv")
     print(f"Wrote {len(spice)} SPICE flame runs -> {CLEAN / 'spice_runs.csv'} and spice.js")
 
     # the ORIGINAL NASA tables, unchanged, so the website can show them next to the cleaned ones
-    write_raw_tables_js(ROOT / "raw_tables.js")
-    print(f"Wrote the original NASA tables -> {ROOT / 'raw_tables.js'}")
+    write_raw_tables_js(JS_DATA / "raw_tables.js")
+    print(f"Wrote the original NASA tables -> {JS_DATA / 'raw_tables.js'}")
 
     # investigations (metadata) -> csv + js for the website
     investigations = build_investigations(tests, detection, bre, bass, spice)
     investigations.to_csv(CLEAN / "investigations.csv", index=False)
     write_js(investigations.astype(object).to_dict("records"), "INVESTIGATIONS",
-             ROOT / "investigations.js", "data/clean/investigations.csv")
+             JS_DATA / "investigations.js", "data/clean/investigations.csv")
     print(f"Wrote {len(investigations)} investigations -> {CLEAN / 'investigations.csv'} and investigations.js")
     return tests
 

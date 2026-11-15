@@ -2230,7 +2230,7 @@ a.cite:hover { text-decoration: underline; }
   background:
     radial-gradient(ellipse 70% 60% at 50% 45%, rgba(5, 7, 10, 0.25), rgba(5, 7, 10, 0.72) 100%),
     linear-gradient(180deg, rgba(5, 7, 10, 0.55) 0%, rgba(5, 7, 10, 0.35) 40%, rgba(5, 7, 10, 0.85) 100%),
-    url("assets/jsc2023e002281~orig.jpg") center 45% / cover no-repeat,
+    url("../assets/jsc2023e002281~orig.jpg") center 45% / cover no-repeat,
     #07090c;
 }
 .ask-hero::before { display: none; }                 /* no starfield on the photo */
@@ -2585,7 +2585,7 @@ a.cite:hover { text-decoration: underline; }
 .closer-home { position: relative; margin: 128px calc(50% - var(--page-w) / 2) 0; padding: 88px calc(var(--page-w) / 2 - 50%);
   --text: #f3f5f8; --muted: #c3cad4; color: var(--text);
   background: linear-gradient(90deg, rgba(5, 7, 10, 0.92) 0%, rgba(5, 7, 10, 0.75) 45%, rgba(5, 7, 10, 0.35) 100%),
-              url("assets/art002e012702~small.jpg") center / cover no-repeat, #05070a; }
+              url("../assets/art002e012702~small.jpg") center / cover no-repeat, #05070a; }
 .closer-home + .home-section { margin-top: 128px; }
 .closer-inner { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr); gap: 48px; align-items: center; }
 .my-flag { display: block; width: clamp(120px, 14vw, 180px); height: auto; margin-bottom: 22px; border-radius: 6px;
